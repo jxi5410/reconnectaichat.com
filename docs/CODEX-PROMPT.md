@@ -12,7 +12,7 @@ Read, in this order, before writing anything:
 3. `/Users/jiexi/Reconnect/website/mock-2026-10-06.html` — the approved mock. The real page is built from it with the differences listed in the order's §3.
 4. `/Users/jiexi/Reconnect/main/docs/brand/README.md` and `/Users/jiexi/Reconnect/main/tools/brand/export_logo.py` — read only, for the ring's exact geometry and colours.
 
-Work only in `/Users/jiexi/Reconnect/website-repo`. If it does not exist, create it with `git init -b main`, copy the three files above into `docs/`, make the initial commit on `main`, then branch `wo-W01`. Never modify `/Users/jiexi/Reconnect/main` or any other checkout.
+Work only in `/Users/jiexi/Reconnect/website-repo`, a clone of `jxi5410/reconnectaichat.com` whose `main` already holds the proposal, order and mock under `docs/`. Branch `wo-W01` from `main`, commit as you go, and push the branch. Never modify `/Users/jiexi/Reconnect/main` or any other checkout.
 
 Deliver everything in the order's §1 layout: `site/` (index, 404, robots, sitemap, assets), `tools/make_assets.py`, `tools/check.py`, `.github/workflows/pages.yml`, `README.md`, `docs/evidence/wo-W01/` with the screenshots, Lighthouse report and gate output, and `STATUS.md` with the final commit hash.
 
