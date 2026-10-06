@@ -1,0 +1,157 @@
+<title>Reconnect website mock</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
+<style>
+  /* Layout: one quiet screen in the instinct.com shape. Mark top-left, a short prose block
+     sitting a third of the way down, one text link as the only call to action, footer at the foot.
+     Colours and the ring come from the app's own tokens (docs/redesign/03-design-tokens.md, Round M). */
+  :root {
+    --page: #F7F9FC;
+    --glow: #DCE6FC;
+    --ink: #1F2A44;
+    --ink-2: #5B6270;
+    --link: #2D5BC7;
+    --rule: rgba(31, 42, 68, 0.12);
+    --ring-a: #B9D0FB;
+    --ring-b: #5F84E6;
+    --font: -apple-system, "SF Pro Text", "Inter", system-ui, "Segoe UI", sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --page: #0A0D14;
+      --glow: #172442;
+      --ink: #E7EBF3;
+      --ink-2: #9AA3B5;
+      --link: #7FA3F5;
+      --rule: rgba(231, 235, 243, 0.14);
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --page: #0A0D14;
+    --glow: #172442;
+    --ink: #E7EBF3;
+    --ink-2: #9AA3B5;
+    --link: #7FA3F5;
+    --rule: rgba(231, 235, 243, 0.14);
+    color-scheme: dark;
+  }
+
+  html, body { height: 100%; }
+  body {
+    margin: 0;
+    background: var(--page);
+    background-image: radial-gradient(90% 55% at 50% -20%, var(--glow) 0%, transparent 70%);
+    background-repeat: no-repeat;
+    color: var(--ink);
+    font-family: var(--font);
+    font-size: 18px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-block: 28px 24px;
+    padding-inline: clamp(20px, 5vw, 56px);
+    box-sizing: border-box;
+  }
+
+  .mark {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: conic-gradient(from 0deg,
+      #ACC5F8 0deg, #8CAAF0 45deg, #6C8FE9 90deg, #5F84E6 135deg,
+      #6C8FE9 180deg, #8CAAF0 225deg, #ACC5F8 270deg, #B9D0FB 315deg, #ACC5F8 360deg);
+    -webkit-mask: radial-gradient(closest-side, transparent 63.5%, #000 64.5%);
+    mask: radial-gradient(closest-side, transparent 63.5%, #000 64.5%);
+  }
+  .mark:focus-visible { outline: 2px solid var(--link); outline-offset: 4px; }
+
+  main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-block: 48px;
+  }
+  .prose {
+    max-width: 34em;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .prose p { margin: 0; text-wrap: pretty; }
+  .prose p.lead { font-weight: 600; }
+
+  .cta {
+    margin-top: 40px;
+    align-self: flex-start;
+    position: relative;
+    display: inline-block;
+    color: var(--link);
+    font-weight: 600;
+    text-decoration: none;
+    padding-bottom: 6px;
+  }
+  .cta::after {
+    content: "";
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    height: 5px;
+    border-radius: 3px;
+    background: linear-gradient(90deg, var(--ring-a), var(--ring-b));
+    opacity: 0.9;
+    transition: transform 240ms cubic-bezier(.34,1.45,.64,1);
+    transform-origin: left center;
+  }
+  .cta:hover::after, .cta:focus-visible::after { transform: scaleY(1.6); }
+  .cta:focus-visible { outline: 2px solid var(--link); outline-offset: 6px; border-radius: 4px; }
+  @media (prefers-reduced-motion: reduce) { .cta::after { transition: none; } }
+
+  footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px 28px;
+    font-size: 14px;
+    color: var(--ink-2);
+  }
+  footer nav { display: flex; flex-wrap: wrap; gap: 10px 24px; }
+  footer a { color: inherit; text-decoration: none; }
+  footer a:hover, footer a:focus-visible { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+
+  @media (max-width: 520px) {
+    body { font-size: 17px; }
+    main { padding-block: 36px; justify-content: flex-start; }
+    .cta { margin-top: 32px; }
+  }
+</style>
+
+<div class="page">
+  <header>
+    <a class="mark" href="#" aria-label="Reconnect home"></a>
+  </header>
+
+  <main>
+    <div class="prose">
+      <p class="lead">Reconnect is an assistant that remembers your conversations. It records the meetings you have in person, keeps every word as it was said, and writes down what was decided and who promised what.</p>
+      <p>Ask it anything afterwards. What did we agree on pricing? When does the pilot start? What did Maya think about the timeline? It answers from what was actually said, and every answer shows the exact line so you can check it. Your own notes stay separate from the record, so it never puts words in anyone's mouth.</p>
+      <p>Nothing you capture expires. Every meeting stays searchable for as long as you want it, on the free plan too. It is built for people whose important conversations happen away from a desk.</p>
+    </div>
+    <a class="cta" href="#">Get Reconnect for iPhone</a>
+  </main>
+
+  <footer>
+    <span>Copyright © 2026 Reconnect</span>
+    <nav aria-label="Legal">
+      <a href="#">Privacy policy</a>
+      <a href="#">Terms of service</a>
+      <span>hello@reconnectaichat.com</span>
+    </nav>
+  </footer>
+</div>
