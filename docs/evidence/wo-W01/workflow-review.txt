@@ -1,0 +1,9 @@
+actionlint is not installed; workflow carefully reviewed against WO-W01 section 7.
+PASS: push to main and workflow_dispatch triggers.
+PASS: contents read, pages write, id-token write permissions.
+PASS: pages concurrency group with cancel-in-progress true.
+PASS: check job checks out source and runs python3 tools/check.py.
+PASS: deploy needs check, checks out its own workspace, uses github-pages environment.
+PASS: configure-pages@v5, upload-pages-artifact@v3 (path: site), deploy-pages@v4.
+PASS: no CNAME.
+The intentional failing gate blocks upload and deployment. Pages has not been enabled or run.

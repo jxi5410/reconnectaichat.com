@@ -1,0 +1,14 @@
+test_actual_site_has_only_the_deliberate_blocker (__main__.GateTests.test_actual_site_has_only_the_deliberate_blocker) ... ok
+test_every_required_head_element_is_enforced (__main__.GateTests.test_every_required_head_element_is_enforced) ... ok
+test_missing_asset (__main__.GateTests.test_missing_asset) ... ok
+test_non_utf8_html_is_rejected (__main__.GateTests.test_non_utf8_html_is_rejected) ... ok
+test_other_files_are_scanned (__main__.GateTests.test_other_files_are_scanned) ... ok
+test_ready_copy_passes_silently (__main__.GateTests.test_ready_copy_passes_silently) ... ok
+test_rejects_unsafe_or_incomplete_html (__main__.GateTests.test_rejects_unsafe_or_incomplete_html) ... ok
+test_size_limit (__main__.GateTests.test_size_limit) ... ok
+test_symlink_is_rejected (__main__.GateTests.test_symlink_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.221s
+
+OK

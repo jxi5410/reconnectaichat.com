@@ -1,0 +1,45 @@
+{
+  "regeneration": "byte-identical",
+  "files": [
+    {
+      "name": "apple-touch-icon.png",
+      "size": [
+        180,
+        180
+      ],
+      "sha256": "7cf8d09ac80d28e62d2a11664007b5fc6543f6c12c274f9dac49c239ff1effa7"
+    },
+    {
+      "name": "favicon-192.png",
+      "size": [
+        192,
+        192
+      ],
+      "sha256": "f8da681f0e8ffa1cbb4c325a8a1ef98891c8dc19bc488bc663ac8b23e4342e68"
+    },
+    {
+      "name": "favicon-32.png",
+      "size": [
+        32,
+        32
+      ],
+      "sha256": "6bda4d6331b4dc5926d289c0c4c5f70c16f2ebb1ed9be94f04cf17aa07a1a757"
+    },
+    {
+      "name": "favicon-512.png",
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "06e448917723d31c23fec9d7b128713713d488213aa82fd5d5aafffd98c0969a"
+    },
+    {
+      "name": "og.png",
+      "size": [
+        1200,
+        630
+      ],
+      "sha256": "af36bcf4957ae8a554b7ef8548152eecd608c40be78d6914647d2624f366a762"
+    }
+  ]
+}

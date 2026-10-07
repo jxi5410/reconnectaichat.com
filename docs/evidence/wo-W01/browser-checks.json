@@ -1,0 +1,811 @@
+{
+  "browser": "154.0.8037.99",
+  "screenshots": [
+    {
+      "screenshot": "index-390-light.png",
+      "scrollWidth": 390,
+      "viewportWidth": 390,
+      "scrollHeight": 844,
+      "viewportHeight": 844,
+      "proseWidth": 350,
+      "proseMax": 578,
+      "bodyFont": "-apple-system, system-ui, \"Segoe UI\", Roboto, sans-serif",
+      "bodyFontSize": "17px",
+      "lineHeight": "25.5px",
+      "mainJustify": "flex-start",
+      "palette": "rgb(247, 249, 252)",
+      "paragraphs": [
+        "Reconnect is an assistant that remembers your conversations. It records the meetings you have in person, keeps every word as it was said, and writes down what was decided and who promised what.",
+        "Ask it anything afterwards. What did we agree on pricing? When does the pilot start? What did Maya think about the timeline? It answers from what was actually said, and every answer shows the exact line so you can check it. Your own notes stay separate from the record, so it never puts words in anyone's mouth.",
+        "Nothing you capture expires. Every meeting stays searchable for as long as you want it, on the free plan too. It is built for people whose important conversations happen away from a desk."
+      ],
+      "leadWeight": "600",
+      "ring": {
+        "width": 40,
+        "height": 40,
+        "mask": "radial-gradient(closest-side, rgba(0, 0, 0, 0) 63.5%, rgb(0, 0, 0) 64.5%)",
+        "animation": "none"
+      },
+      "footerRows": 3,
+      "scripts": 0,
+      "links": [
+        {
+          "text": "Reconnect home",
+          "href": "/"
+        },
+        {
+          "text": "Get Reconnect for iPhone",
+          "href": "https://testflight.apple.com/join/PENDING"
+        },
+        {
+          "text": "Privacy policy",
+          "href": "https://konggu-api-production.up.railway.app/privacy"
+        },
+        {
+          "text": "Terms of service",
+          "href": "https://konggu-api-production.up.railway.app/terms"
+        },
+        {
+          "text": "hello@reconnectaichat.com",
+          "href": "mailto:hello@reconnectaichat.com"
+        }
+      ],
+      "underlineTransition": "0s",
+      "footerFocus": [
+        {
+          "text": "Privacy policy",
+          "outline": "solid"
+        },
+        {
+          "text": "Terms of service",
+          "outline": "solid"
+        },
+        {
+          "text": "hello@reconnectaichat.com",
+          "outline": "solid"
+        }
+      ],
+      "requests": [
+        "http://127.0.0.1:8080/",
+        "http://127.0.0.1:8080/assets/favicon-32.png"
+      ],
+      "errors": [],
+      "markFocus": {
+        "focused": true,
+        "outline": "solid",
+        "outlineWidth": "2px",
+        "mask": "none"
+      },
+      "ctaFocus": {
+        "focused": true,
+        "outline": "solid",
+        "transform": "matrix(1, 0, 0, 1.6, 0, 0)"
+      }
+    },
+    {
+      "screenshot": "404-390-light.png",
+      "scrollWidth": 390,
+      "viewportWidth": 390,
+      "scrollHeight": 844,
+      "viewportHeight": 844,
+      "proseWidth": 350,
+      "proseMax": 578,
+      "bodyFont": "-apple-system, system-ui, \"Segoe UI\", Roboto, sans-serif",
+      "bodyFontSize": "17px",
+      "lineHeight": "25.5px",
+      "mainJustify": "flex-start",
+      "palette": "rgb(247, 249, 252)",
+      "paragraphs": [
+        "There is nothing at this address."
+      ],
+      "leadWeight": "400",
+      "ring": {
+        "width": 40,
+        "height": 40,
+        "mask": "radial-gradient(closest-side, rgba(0, 0, 0, 0) 63.5%, rgb(0, 0, 0) 64.5%)",
+        "animation": "none"
+      },
+      "footerRows": 0,
+      "scripts": 0,
+      "links": [
+        {
+          "text": "Reconnect home",
+          "href": "/"
+        },
+        {
+          "text": "Back to Reconnect",
+          "href": "/"
+        }
+      ],
+      "underlineTransition": "0s",
+      "requests": [
+        "http://127.0.0.1:8080/404.html",
+        "http://127.0.0.1:8080/assets/favicon-32.png"
+      ],
+      "errors": [],
+      "markFocus": {
+        "focused": true,
+        "outline": "solid",
+        "outlineWidth": "2px",
+        "mask": "none"
+      },
+      "ctaFocus": {
+        "focused": true,
+        "outline": "solid",
+        "transform": "matrix(1, 0, 0, 1.6, 0, 0)"
+      }
+    },
+    {
+      "screenshot": "index-390-dark.png",
+      "scrollWidth": 390,
+      "viewportWidth": 390,
+      "scrollHeight": 844,
+      "viewportHeight": 844,
+      "proseWidth": 350,
+      "proseMax": 578,
+      "bodyFont": "-apple-system, system-ui, \"Segoe UI\", Roboto, sans-serif",
+      "bodyFontSize": "17px",
+      "lineHeight": "25.5px",
+      "mainJustify": "flex-start",
+      "palette": "rgb(10, 13, 20)",
+      "paragraphs": [
+        "Reconnect is an assistant that remembers your conversations. It records the meetings you have in person, keeps every word as it was said, and writes down what was decided and who promised what.",
+        "Ask it anything afterwards. What did we agree on pricing? When does the pilot start? What did Maya think about the timeline? It answers from what was actually said, and every answer shows the exact line so you can check it. Your own notes stay separate from the record, so it never puts words in anyone's mouth.",
+        "Nothing you capture expires. Every meeting stays searchable for as long as you want it, on the free plan too. It is built for people whose important conversations happen away from a desk."
+      ],
+      "leadWeight": "600",
+      "ring": {
+        "width": 40,
+        "height": 40,
+        "mask": "radial-gradient(closest-side, rgba(0, 0, 0, 0) 63.5%, rgb(0, 0, 0) 64.5%)",
+        "animation": "none"
+      },
+      "footerRows": 3,
+      "scripts": 0,
+      "links": [
+        {
+          "text": "Reconnect home",
+          "href": "/"
+        },
+        {
+          "text": "Get Reconnect for iPhone",
+          "href": "https://testflight.apple.com/join/PENDING"
+        },
+        {
+          "text": "Privacy policy",
+          "href": "https://konggu-api-production.up.railway.app/privacy"
+        },
+        {
+          "text": "Terms of service",
+          "href": "https://konggu-api-production.up.railway.app/terms"
+        },
+        {
+          "text": "hello@reconnectaichat.com",
+          "href": "mailto:hello@reconnectaichat.com"
+        }
+      ],
+      "underlineTransition": "0s",
+      "footerFocus": [
+        {
+          "text": "Privacy policy",
+          "outline": "solid"
+        },
+        {
+          "text": "Terms of service",
+          "outline": "solid"
+        },
+        {
+          "text": "hello@reconnectaichat.com",
+          "outline": "solid"
+        }
+      ],
+      "requests": [
+        "http://127.0.0.1:8080/",
+        "http://127.0.0.1:8080/assets/favicon-32.png"
+      ],
+      "errors": [],
+      "markFocus": {
+        "focused": true,
+        "outline": "solid",
+        "outlineWidth": "2px",
+        "mask": "none"
+      },
+      "ctaFocus": {
+        "focused": true,
+        "outline": "solid",
+        "transform": "matrix(1, 0, 0, 1.6, 0, 0)"
+      }
+    },
+    {
+      "screenshot": "404-390-dark.png",
+      "scrollWidth": 390,
+      "viewportWidth": 390,
+      "scrollHeight": 844,
+      "viewportHeight": 844,
+      "proseWidth": 350,
+      "proseMax": 578,
+      "bodyFont": "-apple-system, system-ui, \"Segoe UI\", Roboto, sans-serif",
+      "bodyFontSize": "17px",
+      "lineHeight": "25.5px",
+      "mainJustify": "flex-start",
+      "palette": "rgb(10, 13, 20)",
+      "paragraphs": [
+        "There is nothing at this address."
+      ],
+      "leadWeight": "400",
+      "ring": {
+        "width": 40,
+        "height": 40,
+        "mask": "radial-gradient(closest-side, rgba(0, 0, 0, 0) 63.5%, rgb(0, 0, 0) 64.5%)",
+        "animation": "none"
+      },
+      "footerRows": 0,
+      "scripts": 0,
+      "links": [
+        {
+          "text": "Reconnect home",
+          "href": "/"
+        },
+        {
+          "text": "Back to Reconnect",
+          "href": "/"
+        }
+      ],
+      "underlineTransition": "0s",
+      "requests": [
+        "http://127.0.0.1:8080/404.html",
+        "http://127.0.0.1:8080/assets/favicon-32.png"
+      ],
+      "errors": [],
+      "markFocus": {
+        "focused": true,
+        "outline": "solid",
+        "outlineWidth": "2px",
+        "mask": "none"
+      },
+      "ctaFocus": {
+        "focused": true,
+        "outline": "solid",
+        "transform": "matrix(1, 0, 0, 1.6, 0, 0)"
+      }
+    },
+    {
+      "screenshot": "index-820-light.png",
+      "scrollWidth": 820,
+      "viewportWidth": 820,
+      "scrollHeight": 1180,
+      "viewportHeight": 1180,
+      "proseWidth": 612,
+      "proseMax": 612,
+      "bodyFont": "-apple-system, system-ui, \"Segoe UI\", Roboto, sans-serif",
+      "bodyFontSize": "18px",
+      "lineHeight": "27px",
+      "mainJustify": "center",
+      "palette": "rgb(247, 249, 252)",
+      "paragraphs": [
+        "Reconnect is an assistant that remembers your conversations. It records the meetings you have in person, keeps every word as it was said, and writes down what was decided and who promised what.",
+        "Ask it anything afterwards. What did we agree on pricing? When does the pilot start? What did Maya think about the timeline? It answers from what was actually said, and every answer shows the exact line so you can check it. Your own notes stay separate from the record, so it never puts words in anyone's mouth.",
+        "Nothing you capture expires. Every meeting stays searchable for as long as you want it, on the free plan too. It is built for people whose important conversations happen away from a desk."
+      ],
+      "leadWeight": "600",
+      "ring": {
+        "width": 40,
+        "height": 40,
+        "mask": "radial-gradient(closest-side, rgba(0, 0, 0, 0) 63.5%, rgb(0, 0, 0) 64.5%)",
+        "animation": "none"
+      },
+      "footerRows": 1,
+      "scripts": 0,
+      "links": [
+        {
+          "text": "Reconnect home",
+          "href": "/"
+        },
+        {
+          "text": "Get Reconnect for iPhone",
+          "href": "https://testflight.apple.com/join/PENDING"
+        },
+        {
+          "text": "Privacy policy",
+          "href": "https://konggu-api-production.up.railway.app/privacy"
+        },
+        {
+          "text": "Terms of service",
+          "href": "https://konggu-api-production.up.railway.app/terms"
+        },
+        {
+          "text": "hello@reconnectaichat.com",
+          "href": "mailto:hello@reconnectaichat.com"
+        }
+      ],
+      "underlineTransition": "0s",
+      "footerFocus": [
+        {
+          "text": "Privacy policy",
+          "outline": "solid"
+        },
+        {
+          "text": "Terms of service",
+          "outline": "solid"
+        },
+        {
+          "text": "hello@reconnectaichat.com",
+          "outline": "solid"
+        }
+      ],
+      "requests": [
+        "http://127.0.0.1:8080/",
+        "http://127.0.0.1:8080/assets/favicon-32.png"
+      ],
+      "errors": [],
+      "markFocus": {
+        "focused": true,
+        "outline": "solid",
+        "outlineWidth": "2px",
+        "mask": "none"
+      },
+      "ctaFocus": {
+        "focused": true,
+        "outline": "solid",
+        "transform": "matrix(1, 0, 0, 1.6, 0, 0)"
+      }
+    },
+    {
+      "screenshot": "404-820-light.png",
+      "scrollWidth": 820,
+      "viewportWidth": 820,
+      "scrollHeight": 1180,
+      "viewportHeight": 1180,
+      "proseWidth": 612,
+      "proseMax": 612,
+      "bodyFont": "-apple-system, system-ui, \"Segoe UI\", Roboto, sans-serif",
+      "bodyFontSize": "18px",
+      "lineHeight": "27px",
+      "mainJustify": "center",
+      "palette": "rgb(247, 249, 252)",
+      "paragraphs": [
+        "There is nothing at this address."
+      ],
+      "leadWeight": "400",
+      "ring": {
+        "width": 40,
+        "height": 40,
+        "mask": "radial-gradient(closest-side, rgba(0, 0, 0, 0) 63.5%, rgb(0, 0, 0) 64.5%)",
+        "animation": "none"
+      },
+      "footerRows": 0,
+      "scripts": 0,
+      "links": [
+        {
+          "text": "Reconnect home",
+          "href": "/"
+        },
+        {
+          "text": "Back to Reconnect",
+          "href": "/"
+        }
+      ],
+      "underlineTransition": "0s",
+      "requests": [
+        "http://127.0.0.1:8080/404.html",
+        "http://127.0.0.1:8080/assets/favicon-32.png"
+      ],
+      "errors": [],
+      "markFocus": {
+        "focused": true,
+        "outline": "solid",
+        "outlineWidth": "2px",
+        "mask": "none"
+      },
+      "ctaFocus": {
+        "focused": true,
+        "outline": "solid",
+        "transform": "matrix(1, 0, 0, 1.6, 0, 0)"
+      }
+    },
+    {
+      "screenshot": "index-820-dark.png",
+      "scrollWidth": 820,
+      "viewportWidth": 820,
+      "scrollHeight": 1180,
+      "viewportHeight": 1180,
+      "proseWidth": 612,
+      "proseMax": 612,
+      "bodyFont": "-apple-system, system-ui, \"Segoe UI\", Roboto, sans-serif",
+      "bodyFontSize": "18px",
+      "lineHeight": "27px",
+      "mainJustify": "center",
+      "palette": "rgb(10, 13, 20)",
+      "paragraphs": [
+        "Reconnect is an assistant that remembers your conversations. It records the meetings you have in person, keeps every word as it was said, and writes down what was decided and who promised what.",
+        "Ask it anything afterwards. What did we agree on pricing? When does the pilot start? What did Maya think about the timeline? It answers from what was actually said, and every answer shows the exact line so you can check it. Your own notes stay separate from the record, so it never puts words in anyone's mouth.",
+        "Nothing you capture expires. Every meeting stays searchable for as long as you want it, on the free plan too. It is built for people whose important conversations happen away from a desk."
+      ],
+      "leadWeight": "600",
+      "ring": {
+        "width": 40,
+        "height": 40,
+        "mask": "radial-gradient(closest-side, rgba(0, 0, 0, 0) 63.5%, rgb(0, 0, 0) 64.5%)",
+        "animation": "none"
+      },
+      "footerRows": 1,
+      "scripts": 0,
+      "links": [
+        {
+          "text": "Reconnect home",
+          "href": "/"
+        },
+        {
+          "text": "Get Reconnect for iPhone",
+          "href": "https://testflight.apple.com/join/PENDING"
+        },
+        {
+          "text": "Privacy policy",
+          "href": "https://konggu-api-production.up.railway.app/privacy"
+        },
+        {
+          "text": "Terms of service",
+          "href": "https://konggu-api-production.up.railway.app/terms"
+        },
+        {
+          "text": "hello@reconnectaichat.com",
+          "href": "mailto:hello@reconnectaichat.com"
+        }
+      ],
+      "underlineTransition": "0s",
+      "footerFocus": [
+        {
+          "text": "Privacy policy",
+          "outline": "solid"
+        },
+        {
+          "text": "Terms of service",
+          "outline": "solid"
+        },
+        {
+          "text": "hello@reconnectaichat.com",
+          "outline": "solid"
+        }
+      ],
+      "requests": [
+        "http://127.0.0.1:8080/",
+        "http://127.0.0.1:8080/assets/favicon-32.png"
+      ],
+      "errors": [],
+      "markFocus": {
+        "focused": true,
+        "outline": "solid",
+        "outlineWidth": "2px",
+        "mask": "none"
+      },
+      "ctaFocus": {
+        "focused": true,
+        "outline": "solid",
+        "transform": "matrix(1, 0, 0, 1.6, 0, 0)"
+      }
+    },
+    {
+      "screenshot": "404-820-dark.png",
+      "scrollWidth": 820,
+      "viewportWidth": 820,
+      "scrollHeight": 1180,
+      "viewportHeight": 1180,
+      "proseWidth": 612,
+      "proseMax": 612,
+      "bodyFont": "-apple-system, system-ui, \"Segoe UI\", Roboto, sans-serif",
+      "bodyFontSize": "18px",
+      "lineHeight": "27px",
+      "mainJustify": "center",
+      "palette": "rgb(10, 13, 20)",
+      "paragraphs": [
+        "There is nothing at this address."
+      ],
+      "leadWeight": "400",
+      "ring": {
+        "width": 40,
+        "height": 40,
+        "mask": "radial-gradient(closest-side, rgba(0, 0, 0, 0) 63.5%, rgb(0, 0, 0) 64.5%)",
+        "animation": "none"
+      },
+      "footerRows": 0,
+      "scripts": 0,
+      "links": [
+        {
+          "text": "Reconnect home",
+          "href": "/"
+        },
+        {
+          "text": "Back to Reconnect",
+          "href": "/"
+        }
+      ],
+      "underlineTransition": "0s",
+      "requests": [
+        "http://127.0.0.1:8080/404.html",
+        "http://127.0.0.1:8080/assets/favicon-32.png"
+      ],
+      "errors": [],
+      "markFocus": {
+        "focused": true,
+        "outline": "solid",
+        "outlineWidth": "2px",
+        "mask": "none"
+      },
+      "ctaFocus": {
+        "focused": true,
+        "outline": "solid",
+        "transform": "matrix(1, 0, 0, 1.6, 0, 0)"
+      }
+    },
+    {
+      "screenshot": "index-1440-light.png",
+      "scrollWidth": 1440,
+      "viewportWidth": 1440,
+      "scrollHeight": 900,
+      "viewportHeight": 900,
+      "proseWidth": 612,
+      "proseMax": 612,
+      "bodyFont": "-apple-system, system-ui, \"Segoe UI\", Roboto, sans-serif",
+      "bodyFontSize": "18px",
+      "lineHeight": "27px",
+      "mainJustify": "center",
+      "palette": "rgb(247, 249, 252)",
+      "paragraphs": [
+        "Reconnect is an assistant that remembers your conversations. It records the meetings you have in person, keeps every word as it was said, and writes down what was decided and who promised what.",
+        "Ask it anything afterwards. What did we agree on pricing? When does the pilot start? What did Maya think about the timeline? It answers from what was actually said, and every answer shows the exact line so you can check it. Your own notes stay separate from the record, so it never puts words in anyone's mouth.",
+        "Nothing you capture expires. Every meeting stays searchable for as long as you want it, on the free plan too. It is built for people whose important conversations happen away from a desk."
+      ],
+      "leadWeight": "600",
+      "ring": {
+        "width": 40,
+        "height": 40,
+        "mask": "radial-gradient(closest-side, rgba(0, 0, 0, 0) 63.5%, rgb(0, 0, 0) 64.5%)",
+        "animation": "none"
+      },
+      "footerRows": 1,
+      "scripts": 0,
+      "links": [
+        {
+          "text": "Reconnect home",
+          "href": "/"
+        },
+        {
+          "text": "Get Reconnect for iPhone",
+          "href": "https://testflight.apple.com/join/PENDING"
+        },
+        {
+          "text": "Privacy policy",
+          "href": "https://konggu-api-production.up.railway.app/privacy"
+        },
+        {
+          "text": "Terms of service",
+          "href": "https://konggu-api-production.up.railway.app/terms"
+        },
+        {
+          "text": "hello@reconnectaichat.com",
+          "href": "mailto:hello@reconnectaichat.com"
+        }
+      ],
+      "underlineTransition": "0s",
+      "footerFocus": [
+        {
+          "text": "Privacy policy",
+          "outline": "solid"
+        },
+        {
+          "text": "Terms of service",
+          "outline": "solid"
+        },
+        {
+          "text": "hello@reconnectaichat.com",
+          "outline": "solid"
+        }
+      ],
+      "requests": [
+        "http://127.0.0.1:8080/",
+        "http://127.0.0.1:8080/assets/favicon-32.png"
+      ],
+      "errors": [],
+      "markFocus": {
+        "focused": true,
+        "outline": "solid",
+        "outlineWidth": "2px",
+        "mask": "none"
+      },
+      "ctaFocus": {
+        "focused": true,
+        "outline": "solid",
+        "transform": "matrix(1, 0, 0, 1.6, 0, 0)"
+      }
+    },
+    {
+      "screenshot": "404-1440-light.png",
+      "scrollWidth": 1440,
+      "viewportWidth": 1440,
+      "scrollHeight": 900,
+      "viewportHeight": 900,
+      "proseWidth": 612,
+      "proseMax": 612,
+      "bodyFont": "-apple-system, system-ui, \"Segoe UI\", Roboto, sans-serif",
+      "bodyFontSize": "18px",
+      "lineHeight": "27px",
+      "mainJustify": "center",
+      "palette": "rgb(247, 249, 252)",
+      "paragraphs": [
+        "There is nothing at this address."
+      ],
+      "leadWeight": "400",
+      "ring": {
+        "width": 40,
+        "height": 40,
+        "mask": "radial-gradient(closest-side, rgba(0, 0, 0, 0) 63.5%, rgb(0, 0, 0) 64.5%)",
+        "animation": "none"
+      },
+      "footerRows": 0,
+      "scripts": 0,
+      "links": [
+        {
+          "text": "Reconnect home",
+          "href": "/"
+        },
+        {
+          "text": "Back to Reconnect",
+          "href": "/"
+        }
+      ],
+      "underlineTransition": "0s",
+      "requests": [
+        "http://127.0.0.1:8080/404.html",
+        "http://127.0.0.1:8080/assets/favicon-32.png"
+      ],
+      "errors": [],
+      "markFocus": {
+        "focused": true,
+        "outline": "solid",
+        "outlineWidth": "2px",
+        "mask": "none"
+      },
+      "ctaFocus": {
+        "focused": true,
+        "outline": "solid",
+        "transform": "matrix(1, 0, 0, 1.6, 0, 0)"
+      }
+    },
+    {
+      "screenshot": "index-1440-dark.png",
+      "scrollWidth": 1440,
+      "viewportWidth": 1440,
+      "scrollHeight": 900,
+      "viewportHeight": 900,
+      "proseWidth": 612,
+      "proseMax": 612,
+      "bodyFont": "-apple-system, system-ui, \"Segoe UI\", Roboto, sans-serif",
+      "bodyFontSize": "18px",
+      "lineHeight": "27px",
+      "mainJustify": "center",
+      "palette": "rgb(10, 13, 20)",
+      "paragraphs": [
+        "Reconnect is an assistant that remembers your conversations. It records the meetings you have in person, keeps every word as it was said, and writes down what was decided and who promised what.",
+        "Ask it anything afterwards. What did we agree on pricing? When does the pilot start? What did Maya think about the timeline? It answers from what was actually said, and every answer shows the exact line so you can check it. Your own notes stay separate from the record, so it never puts words in anyone's mouth.",
+        "Nothing you capture expires. Every meeting stays searchable for as long as you want it, on the free plan too. It is built for people whose important conversations happen away from a desk."
+      ],
+      "leadWeight": "600",
+      "ring": {
+        "width": 40,
+        "height": 40,
+        "mask": "radial-gradient(closest-side, rgba(0, 0, 0, 0) 63.5%, rgb(0, 0, 0) 64.5%)",
+        "animation": "none"
+      },
+      "footerRows": 1,
+      "scripts": 0,
+      "links": [
+        {
+          "text": "Reconnect home",
+          "href": "/"
+        },
+        {
+          "text": "Get Reconnect for iPhone",
+          "href": "https://testflight.apple.com/join/PENDING"
+        },
+        {
+          "text": "Privacy policy",
+          "href": "https://konggu-api-production.up.railway.app/privacy"
+        },
+        {
+          "text": "Terms of service",
+          "href": "https://konggu-api-production.up.railway.app/terms"
+        },
+        {
+          "text": "hello@reconnectaichat.com",
+          "href": "mailto:hello@reconnectaichat.com"
+        }
+      ],
+      "underlineTransition": "0s",
+      "footerFocus": [
+        {
+          "text": "Privacy policy",
+          "outline": "solid"
+        },
+        {
+          "text": "Terms of service",
+          "outline": "solid"
+        },
+        {
+          "text": "hello@reconnectaichat.com",
+          "outline": "solid"
+        }
+      ],
+      "requests": [
+        "http://127.0.0.1:8080/",
+        "http://127.0.0.1:8080/assets/favicon-32.png"
+      ],
+      "errors": [],
+      "markFocus": {
+        "focused": true,
+        "outline": "solid",
+        "outlineWidth": "2px",
+        "mask": "none"
+      },
+      "ctaFocus": {
+        "focused": true,
+        "outline": "solid",
+        "transform": "matrix(1, 0, 0, 1.6, 0, 0)"
+      }
+    },
+    {
+      "screenshot": "404-1440-dark.png",
+      "scrollWidth": 1440,
+      "viewportWidth": 1440,
+      "scrollHeight": 900,
+      "viewportHeight": 900,
+      "proseWidth": 612,
+      "proseMax": 612,
+      "bodyFont": "-apple-system, system-ui, \"Segoe UI\", Roboto, sans-serif",
+      "bodyFontSize": "18px",
+      "lineHeight": "27px",
+      "mainJustify": "center",
+      "palette": "rgb(10, 13, 20)",
+      "paragraphs": [
+        "There is nothing at this address."
+      ],
+      "leadWeight": "400",
+      "ring": {
+        "width": 40,
+        "height": 40,
+        "mask": "radial-gradient(closest-side, rgba(0, 0, 0, 0) 63.5%, rgb(0, 0, 0) 64.5%)",
+        "animation": "none"
+      },
+      "footerRows": 0,
+      "scripts": 0,
+      "links": [
+        {
+          "text": "Reconnect home",
+          "href": "/"
+        },
+        {
+          "text": "Back to Reconnect",
+          "href": "/"
+        }
+      ],
+      "underlineTransition": "0s",
+      "requests": [
+        "http://127.0.0.1:8080/404.html",
+        "http://127.0.0.1:8080/assets/favicon-32.png"
+      ],
+      "errors": [],
+      "markFocus": {
+        "focused": true,
+        "outline": "solid",
+        "outlineWidth": "2px",
+        "mask": "none"
+      },
+      "ctaFocus": {
+        "focused": true,
+        "outline": "solid",
+        "transform": "matrix(1, 0, 0, 1.6, 0, 0)"
+      }
+    }
+  ],
+  "ordinaryTransition": "0.24s",
+  "issues": []
+}
