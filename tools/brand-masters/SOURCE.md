@@ -1,0 +1,1 @@
+Copied unchanged from `/Users/jiexi/Reconnect/main/docs/brand/exports/{01-app-icon-light.png,lockup-tight.png,02-ring-gradient.png}` at `jxi5410/Reconnect` commit `da631e2f47fe9572909f78b6d0f4744559eb9dae`; the first two generate the site assets and the third is the ring comparison reference.
