@@ -1,0 +1,48 @@
+{
+  "desktop": {
+    "lighthouseVersion": "13.5.0",
+    "fetchTime": "2026-10-07T10:12:28.278Z",
+    "scores": {
+      "performance": 100,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100,
+      "agentic-browsing": 100
+    },
+    "runWarnings": [],
+    "metrics": {
+      "first-contentful-paint": "0.2\u00a0s",
+      "largest-contentful-paint": "0.2\u00a0s",
+      "speed-index": "0.5\u00a0s",
+      "total-blocking-time": "0\u00a0ms",
+      "cumulative-layout-shift": "0"
+    },
+    "requests": [
+      "http://127.0.0.1:8080/",
+      "http://127.0.0.1:8080/assets/favicon-32.png"
+    ]
+  },
+  "mobile": {
+    "lighthouseVersion": "13.5.0",
+    "fetchTime": "2026-10-07T10:13:06.161Z",
+    "scores": {
+      "performance": 100,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100,
+      "agentic-browsing": 100
+    },
+    "runWarnings": [],
+    "metrics": {
+      "first-contentful-paint": "0.6\u00a0s",
+      "largest-contentful-paint": "0.8\u00a0s",
+      "speed-index": "1.0\u00a0s",
+      "total-blocking-time": "0\u00a0ms",
+      "cumulative-layout-shift": "0"
+    },
+    "requests": [
+      "http://127.0.0.1:8080/",
+      "http://127.0.0.1:8080/assets/favicon-32.png"
+    ]
+  }
+}

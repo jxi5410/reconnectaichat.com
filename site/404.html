@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Reconnect</title>
+  <meta name="description" content="Reconnect is an assistant that remembers your conversations. It records the meetings you have in person, keeps every word, and answers from what was actually said.">
+  <link rel="canonical" href="https://reconnectaichat.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Reconnect">
+  <meta property="og:description" content="Reconnect is an assistant that remembers your conversations. It records the meetings you have in person, keeps every word, and answers from what was actually said.">
+  <meta property="og:url" content="https://reconnectaichat.com/">
+  <meta property="og:image" content="https://reconnectaichat.com/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="The Reconnect ring and wordmark">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#F7F9FC" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0A0D14" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon-512.png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root {
+    --page: #F7F9FC;
+    --glow: #DCE6FC;
+    --ink: #1F2A44;
+    --ink-2: #5B6270;
+    --link: #2D5BC7;
+    --rule: rgba(31, 42, 68, 0.12);
+    --ring-a: #B9D0FB;
+    --ring-b: #5F84E6;
+    --font: -apple-system, system-ui, "Segoe UI", Roboto, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --page: #0A0D14;
+      --glow: #172442;
+      --ink: #E7EBF3;
+      --ink-2: #9AA3B5;
+      --link: #7FA3F5;
+      --rule: rgba(231, 235, 243, 0.14);
+      color-scheme: dark;
+    }
+  }
+
+  html, body { height: 100%; }
+  body {
+    margin: 0;
+    background: var(--page);
+    background-image: radial-gradient(90% 55% at 50% -20%, var(--glow) 0%, transparent 70%);
+    background-repeat: no-repeat;
+    color: var(--ink);
+    font-family: var(--font);
+    font-size: 18px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-block: 28px 24px;
+    padding-inline: clamp(20px, 5vw, 56px);
+    box-sizing: border-box;
+  }
+
+  .mark {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: conic-gradient(from 0deg,
+      #ACC5F8 0deg,
+      #A9C2F7 5.070423deg,
+      #A6C0F7 10.140845deg,
+      #A2BDF6 15.211268deg,
+      #9FBAF5 20.28169deg,
+      #9BB7F4 25.352113deg,
+      #97B4F3 30.422535deg,
+      #93B0F2 35.492958deg,
+      #8FADF1 40.56338deg,
+      #8CAAF0 45.633803deg,
+      #88A6EF 50.704225deg,
+      #84A3EF 55.774648deg,
+      #80A0EE 60.84507deg,
+      #7C9CED 65.915493deg,
+      #7899EC 70.985915deg,
+      #7596EB 76.056338deg,
+      #7194EA 81.126761deg,
+      #6E91EA 86.197183deg,
+      #6B8FE9 91.267606deg,
+      #698CE8 96.338028deg,
+      #678AE8 101.408451deg,
+      #6489E7 106.478873deg,
+      #6387E7 111.549296deg,
+      #6186E7 116.619718deg,
+      #6085E6 121.690141deg,
+      #5F84E6 126.760563deg,
+      #5F84E6 131.830986deg,
+      #5F84E6 136.901408deg,
+      #5F84E6 141.971831deg,
+      #6085E6 147.042254deg,
+      #6186E6 152.112676deg,
+      #6287E7 157.183099deg,
+      #6488E7 162.253521deg,
+      #668AE8 167.323944deg,
+      #688CE8 172.394366deg,
+      #6B8EE9 177.464789deg,
+      #6E90E9 182.535211deg,
+      #7193EA 187.605634deg,
+      #7496EB 192.676056deg,
+      #7799EC 197.746479deg,
+      #7B9CED 202.816901deg,
+      #7F9FED 207.887324deg,
+      #83A2EE 212.957746deg,
+      #87A5EF 218.028169deg,
+      #8BA9F0 223.098592deg,
+      #8EACF1 228.169014deg,
+      #92AFF2 233.239437deg,
+      #96B3F3 238.309859deg,
+      #9AB6F4 243.380282deg,
+      #9EB9F5 248.450704deg,
+      #A1BCF6 253.521127deg,
+      #A5BFF6 258.591549deg,
+      #A8C2F7 263.661972deg,
+      #ABC4F8 268.732394deg,
+      #AEC7F8 273.802817deg,
+      #B0C9F9 278.873239deg,
+      #B3CBF9 283.943662deg,
+      #B4CCFA 289.014085deg,
+      #B6CDFA 294.084507deg,
+      #B7CFFB 299.15493deg,
+      #B8CFFB 304.225352deg,
+      #B9D0FB 309.295775deg,
+      #B9D0FB 314.366197deg,
+      #B9D0FB 319.43662deg,
+      #B8CFFB 324.507042deg,
+      #B8CFFB 329.577465deg,
+      #B6CEFA 334.647887deg,
+      #B5CDFA 339.71831deg,
+      #B3CBFA 344.788732deg,
+      #B1C9F9 349.859155deg,
+      #AFC7F9 354.929577deg,
+      #ACC5F8 360deg);
+    -webkit-mask: radial-gradient(closest-side, transparent 63.5%, #000 64.5%);
+    mask: radial-gradient(closest-side, transparent 63.5%, #000 64.5%);
+  }
+  .home { display: inline-block; width: 40px; height: 40px; border-radius: 50%; }
+  a:focus-visible { outline: 2px solid var(--link); outline-offset: 4px; }
+
+  main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-block: 48px;
+  }
+  .prose {
+    max-width: 34em;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .prose p { margin: 0; text-wrap: pretty; }
+  .prose p.lead { font-weight: 600; }
+
+  .cta {
+    margin-top: 40px;
+    align-self: flex-start;
+    position: relative;
+    display: inline-block;
+    color: var(--link);
+    font-weight: 600;
+    text-decoration: none;
+    padding-bottom: 6px;
+  }
+  .cta::after {
+    content: "";
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    height: 5px;
+    border-radius: 3px;
+    background: linear-gradient(90deg, var(--ring-a), var(--ring-b));
+    opacity: 0.9;
+    transition: transform 240ms cubic-bezier(.34,1.45,.64,1);
+    transform-origin: left center;
+  }
+  .cta:hover::after, .cta:focus-visible::after { transform: scaleY(1.6); }
+  .cta:focus-visible { outline: 2px solid var(--link); outline-offset: 6px; border-radius: 4px; }
+  @media (prefers-reduced-motion: reduce) { .cta::after { transition: none; } }
+
+  footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px 28px;
+    font-size: 14px;
+    color: var(--ink-2);
+  }
+  footer nav { display: flex; flex-wrap: wrap; gap: 10px 24px; }
+  footer a { color: inherit; text-decoration: none; }
+  footer a:hover, footer a:focus-visible { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+
+  @media (max-width: 520px) {
+    body { font-size: 17px; }
+    main { padding-block: 36px; justify-content: flex-start; }
+    .cta { margin-top: 32px; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <a class="home" href="/" aria-label="Reconnect home"><span class="mark" aria-hidden="true"></span></a>
+  </header>
+  <main>
+    <div class="prose"><p>There is nothing at this address.</p></div>
+    <a class="cta" href="/">Back to Reconnect</a>
+  </main>
+</div>
+</body>
+</html>

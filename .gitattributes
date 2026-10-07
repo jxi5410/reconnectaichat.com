@@ -1,0 +1,3 @@
+# Preserve Lighthouse's generated HTML reports verbatim.
+docs/evidence/wo-W01/lighthouse-*.report.html -whitespace linguist-generated=true
+docs/evidence/wo-W01/lighthouse-*.report.json linguist-generated=true
