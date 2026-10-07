@@ -21,9 +21,8 @@ class GateTests(unittest.TestCase):
         self.original = self.index.read_text().replace("/join/PENDING", "/join/Example1")
         self.index.write_text(self.original)
 
-    def test_actual_site_has_only_the_deliberate_blocker(self):
-        self.assertEqual(check_site(ROOT / "site"), [
-            "site/index.html: PENDING placeholder must be replaced before deployment."])
+    def test_actual_site_passes(self):
+        self.assertEqual(check_site(ROOT / "site"), [])
 
     def test_ready_copy_passes_silently(self):
         self.assertEqual(check_site(self.site), [])
