@@ -10,8 +10,8 @@ from urllib.parse import unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 ALLOWED_HOSTS = {"konggu-api-production.up.railway.app", "testflight.apple.com", "reconnectaichat.com"}
-DESCRIPTION = ("Reconnect is an assistant that remembers your conversations. It records the meetings "
-               "you have in person, keeps every word, and answers from what was actually said.")
+DESCRIPTION = ("Reconnect is a personal assistant you talk to. It keeps every word of your conversations, "
+               "knows what is coming up, and answers from what was actually said.")
 CJK = re.compile("[\u2e80-\u9fff\uac00-\ud7af\uf900-\ufaff\ufe30-\ufe4f\uff66-\uff9f"
                  "\U0001b000-\U0001b2ff\U00020000-\U000323af]")
 URL = re.compile(r"(?:[a-z][a-z0-9+.-]*:)?//[^\s\"'<>]+", re.I)
@@ -189,8 +189,8 @@ def check_site(site):
             ("meta", {"property": "og:image:height", "content": "630"}),
             ("meta", {"property": "og:image:alt", "content": "The Reconnect ring and wordmark"}),
             ("meta", {"name": "twitter:card", "content": "summary_large_image"}),
-            ("meta", {"name": "theme-color", "content": "#F7F9FC", "media": "(prefers-color-scheme: light)"}),
-            ("meta", {"name": "theme-color", "content": "#0A0D14", "media": "(prefers-color-scheme: dark)"}),
+            ("meta", {"name": "theme-color", "content": "#FFFFFF", "media": "(prefers-color-scheme: light)"}),
+            ("meta", {"name": "theme-color", "content": "#000000", "media": "(prefers-color-scheme: dark)"}),
             ("link", {"rel": "apple-touch-icon", "href": "/assets/apple-touch-icon.png"}),
             ("meta", {"name": "viewport", "content": "width=device-width, initial-scale=1"}),
             ("meta", {"charset": "utf-8"}),

@@ -28,13 +28,14 @@ The test suite exercises the gate on temporary copies in ignored `.local/`.
 
 ## Copy and styles
 
-The approved three paragraphs, iPhone call to action, metadata, and footer live
-in `site/index.html`. `site/404.html` contains the missing-address message and home
-link. Each document has one inline stylesheet; keep their shared styles identical.
-The ring is 40 px, with a 64% inner radius and 72 sampled cosine-gradient stops
-including the matching 0/360-degree endpoints. Its focus outline sits on the
-unmasked link so keyboard focus remains visible.
+The page copy (four paragraphs, the iPhone call to action), metadata, and footer
+live in `site/index.html`. The 16 October 2026 update (voice-first lead, one
+"coming next" line, black and white) is recorded in `docs/update-2026-10-16.md`.
+`site/404.html` contains the missing-address message and home link. Each document
+has one inline stylesheet; keep their shared styles identical. The ring is a 40 px
+circle in ink with a 64% inner radius (a 7.2 px border). There is no accent colour.
 
+- `docs/update-2026-10-16.md`: the owner's choices for the current copy and look.
 - `docs/WO-W01-website.md`: binding implementation order.
 - `docs/PROPOSAL-2026-10-06.md`: approved proposal and owner decisions.
 - `docs/mock-2026-10-06.html`: historical approved mock; never deployed.
@@ -47,12 +48,10 @@ With Python 3 and Pillow available:
 
 ```sh
 python3 tools/make_assets.py
-python3 tools/make_assets.py --ring-stops
 ```
 
-All five deployed PNGs are generated from the committed masters in
-`tools/brand-masters/`; `SOURCE.md` records their source commit. No app checkout or
-font file is needed. `--ring-stops` prints the gradient stops used in both pages.
+The four icons are drawn as an ink ring on white. The share image paints the
+ring-and-wordmark lockup in `tools/brand-masters/lockup-tight.png` in ink.
 
 ## Delivery
 
