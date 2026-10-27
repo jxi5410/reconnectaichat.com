@@ -35,6 +35,8 @@ live in `site/index.html`. The 16 October 2026 update (voice-first lead, one
 has one inline stylesheet; keep their shared styles identical. The ring is a 40 px
 circle in ink with a 64% inner radius (a 7.2 px border). There is no accent colour.
 
+- `docs/update-2026-10-27.md`: the privacy policy and terms pages (`site/privacy/`, `site/terms/`), copied from
+  the production API; change both copies together.
 - `docs/update-2026-10-16.md`: the owner's choices for the current copy and look.
 - `docs/WO-W01-website.md`: binding implementation order.
 - `docs/PROPOSAL-2026-10-06.md`: approved proposal and owner decisions.

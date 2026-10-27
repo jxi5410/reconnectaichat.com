@@ -9,7 +9,11 @@ from pathlib import Path
 from urllib.parse import unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
-ALLOWED_HOSTS = {"konggu-api-production.up.railway.app", "testflight.apple.com", "reconnectaichat.com"}
+ALLOWED_HOSTS = {"testflight.apple.com", "www.apple.com", "reconnectaichat.com"}
+ALLOWED_MAILTO = {"mailto:hello@reconnectaichat.com", "mailto:xj@reconnectaichat.com"}
+# The policy and terms are the live API documents; their canonical address and title are fixed.
+LEGAL_PAGES = {"privacy/index.html": ("https://reconnectaichat.com/privacy", "Reconnect Privacy Policy"),
+               "terms/index.html": ("https://reconnectaichat.com/terms", "Reconnect Terms of Service")}
 DESCRIPTION = ("Reconnect is a personal assistant you talk to. It keeps every word of your conversations, "
                "knows what is coming up, and answers from what was actually said.")
 CJK = re.compile("[\u2e80-\u9fff\uac00-\ud7af\uf900-\ufaff\ufe30-\ufe4f\uff66-\uff9f"
@@ -62,7 +66,7 @@ def check_site(site):
         if line not in failures:
             failures.append(line)
 
-    required = ["index.html", "404.html", "robots.txt", "sitemap.xml", "assets/favicon-32.png",
+    required = ["index.html", "404.html", *LEGAL_PAGES, "robots.txt", "sitemap.xml", "assets/favicon-32.png",
                 "assets/favicon-192.png", "assets/favicon-512.png", "assets/apple-touch-icon.png", "assets/og.png"]
     for name in required:
         if not (site / name).is_file():
@@ -79,7 +83,7 @@ def check_site(site):
         raw = path.read_bytes()
         if b"PENDING" in raw:
             fail(path, "PENDING placeholder must be replaced before deployment.")
-        if re.search(rb"lorem|TODO|FIXME", raw, re.I):
+        if re.search(rb"\b(?:lorem|TODO|FIXME)\b", raw, re.I):
             fail(path, "draft marker (lorem, TODO or FIXME).")
         try:
             source = raw.decode("utf-8")
@@ -93,7 +97,7 @@ def check_site(site):
             fail(path, "CJK character is forbidden.")
         if "PENDING" in decoded:
             fail(path, "PENDING placeholder must be replaced before deployment.")
-        if re.search(r"lorem|TODO|FIXME", decoded, re.I):
+        if re.search(r"\b(?:lorem|TODO|FIXME)\b", decoded, re.I):
             fail(path, "draft marker (lorem, TODO or FIXME).")
         if re.search(r"<\s*script", decoded, re.I):
             fail(path, "script tag is forbidden.")
@@ -114,7 +118,7 @@ def check_site(site):
             fail(path, f"invalid URL: {value}")
             return
         if url.scheme == "mailto" and not resource:
-            if value != "mailto:hello@reconnectaichat.com":
+            if value not in ALLOWED_MAILTO:
                 fail(path, "unexpected mailto link.")
             return
         if url.netloc or url.scheme:
@@ -171,6 +175,33 @@ def check_site(site):
             fail(path, "CSS imports and web fonts are forbidden.")
         for value in re.findall(r"url\(\s*['\"]?(.*?)['\"]?\s*\)", css, re.I):
             reference(path, value, resource=True)
+
+    for path, doc in documents.items():
+        hrefs = {attrs.get("href") for tag, attrs in doc.tags if tag == "a"}
+        for legal in ("/privacy", "/terms"):
+            if legal not in hrefs:
+                fail(path, f"footer link to {legal} is missing.")
+
+    for name, (canonical, title) in LEGAL_PAGES.items():
+        page = site / name
+        if page not in documents:
+            continue
+        doc = documents[page]
+        if not any(t == "link" and a.get("rel") == "canonical" and a.get("href") == canonical for t, a in doc.head_tags):
+            fail(page, f"missing or incorrect canonical link: {canonical}")
+        if doc.title.strip() != title:
+            fail(page, "missing or incorrect head title.")
+        if not any(t == "meta" and a.get("name") == "viewport" and a.get("content") == "width=device-width, initial-scale=1"
+                   for t, a in doc.head_tags):
+            fail(page, "missing viewport meta.")
+        if not any(tag == "html" and attrs.get("lang") == "en" for tag, attrs in doc.tags):
+            fail(page, "html lang must be en.")
+        if sum(tag == "style" for tag, _ in doc.tags) != 1:
+            fail(page, "exactly one inline style element is required.")
+        if sum(tag == "h1" for tag, _ in doc.tags) != 1:
+            fail(page, "exactly one h1 is required.")
+        if not page.read_text().lstrip().lower().startswith("<!doctype html>"):
+            fail(page, "HTML5 doctype is required.")
 
     index = site / "index.html"
     if index.is_file() and index.stat().st_size > 12 * 1024:

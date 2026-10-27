@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Reconnect Terms of Service</title>
+  <meta name="description" content="The Reconnect terms of service.">
+  <link rel="canonical" href="https://reconnectaichat.com/terms">
+  <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon-512.png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root {
+    --page: #FFFFFF;
+    --ink: #0B0B0C;
+    --ink-2: #6B6B72;
+    --font: -apple-system, system-ui, "Segoe UI", Roboto, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --page: #000000;
+      --ink: #F4F4F6;
+      --ink-2: #9A9AA2;
+      color-scheme: dark;
+    }
+  }
+
+  html, body { height: 100%; }
+  body {
+    margin: 0;
+    background: var(--page);
+    color: var(--ink);
+    font-family: var(--font);
+    font-size: 18px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-block: 28px 24px;
+    padding-inline: clamp(20px, 5vw, 56px);
+    box-sizing: border-box;
+  }
+
+  /* The ring is ink: a 40 px circle with a 64% inner radius (7.2 px stroke). */
+  .mark {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 40px;
+    height: 40px;
+    border: 7.2px solid var(--ink);
+    border-radius: 50%;
+  }
+  .home { display: inline-block; width: 40px; height: 40px; border-radius: 50%; }
+  a:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
+
+  main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-block: 48px;
+  }
+  .prose {
+    max-width: 34em;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .prose p { margin: 0; text-wrap: pretty; }
+  .prose p.lead { font-weight: 600; }
+
+  .cta {
+    margin-top: 40px;
+    align-self: flex-start;
+    position: relative;
+    display: inline-block;
+    color: var(--ink);
+    font-weight: 600;
+    text-decoration: none;
+    padding-bottom: 6px;
+  }
+  .cta::after {
+    content: "";
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    height: 5px;
+    border-radius: 3px;
+    background: var(--ink);
+    transition: transform 240ms cubic-bezier(.34,1.45,.64,1);
+    transform-origin: left center;
+  }
+  .cta:hover::after, .cta:focus-visible::after { transform: scaleY(1.6); }
+  .cta:focus-visible { outline: 2px solid var(--ink); outline-offset: 6px; border-radius: 4px; }
+  @media (prefers-reduced-motion: reduce) { .cta::after { transition: none; } }
+
+  footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px 28px;
+    font-size: 14px;
+    color: var(--ink-2);
+  }
+  footer nav { display: flex; flex-wrap: wrap; gap: 10px 24px; }
+  footer .company { flex-basis: 100%; margin: 0; }
+  footer a { color: inherit; text-decoration: none; }
+  footer a:hover, footer a:focus-visible { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+
+  @media (max-width: 520px) {
+    body { font-size: 17px; }
+    main { padding-block: 36px; justify-content: flex-start; }
+    .cta { margin-top: 32px; }
+  }
+
+  /* Policy and terms pages: the text is the live document, set in the site's own look. */
+  main.doc { justify-content: flex-start; }
+  .legal { max-width: 38em; }
+  .legal h1 { font-size: 30px; line-height: 1.2; font-weight: 600; margin: 0 0 6px; }
+  .legal h2 { font-size: 20px; line-height: 1.3; font-weight: 600; margin: 40px 0 12px; }
+  .legal p { margin: 0 0 14px; text-wrap: pretty; }
+  .legal .meta { color: var(--ink-2); font-size: 15px; }
+  .legal ul { margin: 0 0 14px; padding-left: 22px; }
+  .legal li { margin: 8px 0; text-wrap: pretty; }
+  .legal dl { margin: 0 0 14px; }
+  .legal dt { font-weight: 600; margin-top: 18px; }
+  .legal dd { margin: 4px 0 0; text-wrap: pretty; }
+  .legal a { color: var(--ink); text-underline-offset: 3px; }
+  .legal .closing { margin-top: 40px; color: var(--ink-2); font-size: 15px; }
+  @media (max-width: 520px) {
+    .legal h1 { font-size: 26px; }
+    .legal h2 { margin-top: 32px; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <a class="home" href="/" aria-label="Reconnect home"><span class="mark" aria-hidden="true"></span></a>
+  </header>
+
+  <main class="doc">
+    <article class="legal">
+      <h1>Reconnect Terms of Service</h1>
+      <p class="meta">Last updated: 22 September 2026</p>
+      <h2>Using Reconnect</h2>
+      <p>These terms govern your use of Reconnect, operated by RECONNECT.AI LTD. By using the service, you agree to these terms. If you use it for an organisation, you must have authority to do so. You must be able to enter a binding agreement under the laws that apply to you. Where parental or guardian permission is required, obtain it before using the service.</p>
+      <h2>Your account</h2>
+      <p>Keep your sign-in details and connected-service credentials secure. You are responsible for activity you authorise through your account. Tell us promptly if you believe someone has gained unauthorised access. Provide accurate account information and do not impersonate another person. Features, usage allowances and availability may depend on your plan, device and region.</p>
+      <h2>Recordings and permissions</h2>
+      <p>Before recording, uploading or sharing content, obtain the permissions and provide the notices required by applicable law and by your workplace or organisation. This includes the rights of participants and owners of documents, images and recordings. You control when recording starts and should check the recording indicator to confirm when it ends. Voice commands may not always be recognised; a manual stop control remains available. Do not use Reconnect for covert or unlawful surveillance.</p>
+      <h2>Your content and our processing</h2>
+      <p>You retain your rights in the content you provide. You grant us permission to host, copy, transmit and process that content only as needed to provide, secure and support the service and carry out your instructions. This includes using service providers for transcription, AI responses, summaries and storage. This permission does not transfer ownership of your content to us. You must have the right to provide the content and to permit this processing. Our <a href="/privacy">Privacy Policy</a> explains personal-data handling, retention and deletion.</p>
+      <h2>AI output and your decisions</h2>
+      <p>Transcripts, speaker labels, extracted text, summaries, answers and other AI output can be incomplete or incorrect. Check material details against the original source, especially names, dates, commitments and figures, before relying on or sharing output. Reconnect does not provide professional medical, legal or financial advice, and must not be used as an emergency service. You are responsible for decisions you make using output. Different users may receive similar output; we do not promise that output is unique or free of third-party rights.</p>
+      <h2>Imports and connected services</h2>
+      <p>Only connect accounts and import material you are entitled to access. Other services have their own terms, availability and export limits. An import may not include every field or original recording. Review the options before starting: choosing to overwrite duplicates can replace existing meeting content, and any supported audio replacement can replace its recording. Keep a separate copy of source material you need. Disconnecting a source does not automatically delete copies already imported into Reconnect; use Reconnect’s deletion controls for those copies.</p>
+      <h2>Plans, payments and cancellation</h2>
+      <p>Any price, billing period, trial conditions and included allowance will be shown before purchase. App Store purchases and subscriptions are billed by Apple under the terms presented at purchase. Manage or cancel a subscription in your Apple account settings; deleting Reconnect or your account does not itself cancel an Apple subscription. Refund requests for Apple-billed purchases are handled through Apple, subject to applicable consumer rights. We will disclose changes to paid terms before they apply and provide any notice or choices required by law.</p>
+      <h2>Responsible use</h2>
+      <p>Do not use the service to break the law, infringe others’ rights, distribute malicious software, harass people or obtain access to accounts or data without permission. Do not evade usage limits, disrupt the service or defeat its security controls. You may not copy or exploit our software or branding beyond the permissions granted by applicable licences or law. Report suspected security issues to the contact below without accessing or exposing other people’s data.</p>
+      <h2>Availability, changes and ending use</h2>
+      <p>We aim to keep Reconnect useful and reliable, but cannot promise uninterrupted availability or error-free processing. We may maintain or change features and providers. If a material change reduces a paid service, we will provide notice and any remedy required by law. We may restrict access where reasonably necessary to address a serious breach, security risk or legal obligation. Where practical and lawful, we will explain the reason and give you an opportunity to resolve the issue. You may stop using Reconnect at any time and use available export and deletion controls. Contact us if you need help retrieving your content.</p>
+      <h2>Your legal rights and our responsibility</h2>
+      <p>Nothing in these terms excludes or limits rights or remedies that cannot lawfully be excluded, including applicable consumer guarantees, or liability for fraud, fraudulent misrepresentation, or death or personal injury caused by negligence. We remain responsible for providing the service with the care and skill required by applicable law. Subject to those rights, we are not responsible for losses that were not reasonably foreseeable when you agreed to these terms or that arise solely from your unlawful use or unauthorised changes. These terms do not require you to give up mandatory protections or the right to bring a claim in courts available to you under applicable law.</p>
+      <h2>App Store licence</h2>
+      <p>For the iOS app, Apple’s <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Standard End User Licence Agreement</a> governs the software licence where applicable. These terms govern the Reconnect service and do not replace Apple’s purchase terms. Apple is not the provider of Reconnect’s transcription, storage or AI services.</p>
+      <h2>Updates and contact</h2>
+      <p>We may update these terms to reflect changes to the service or legal requirements. We will make the current version available here and provide appropriate notice of material changes before they take effect, except where an urgent legal or security reason requires otherwise. Changes do not retrospectively remove rights you already have. For questions, complaints or help resolving a dispute, contact RECONNECT.AI LTD at <a href="mailto:xj@reconnectaichat.com">xj@reconnectaichat.com</a>.</p>
+    </article>
+  </main>
+
+  <footer>
+    <p class="company">Reconnect is a product of RECONNECT.AI LTD, a company registered in England and Wales, company number 17506546. Registered office: 5 Bramfield Road, London, England, SW11 6RA.</p>
+    <span>Copyright © 2026 Reconnect</span>
+    <nav aria-label="Legal">
+      <a href="/privacy">Privacy policy</a>
+      <a href="/terms">Terms of service</a>
+      <a href="mailto:hello@reconnectaichat.com">hello@reconnectaichat.com</a>
+    </nav>
+  </footer>
+</div>
+</body>
+</html>
