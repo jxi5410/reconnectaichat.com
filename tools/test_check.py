@@ -65,6 +65,58 @@ class GateTests(unittest.TestCase):
                     self.index.write_text(self.original.replace(line, ""))
                     self.assertTrue(any("head" in failure for failure in check_site(self.site)))
 
+    def test_legal_pages_are_required_and_linked(self):
+        for page in ("privacy", "terms"):
+            with self.subTest(page=page):
+                shutil.rmtree(self.site)
+                shutil.copytree(ROOT / "site", self.site)
+                (self.site / page / "index.html").unlink()
+                self.assertTrue(any("required file" in failure for failure in check_site(self.site)))
+        for page in ("index.html", "404.html", "privacy/index.html", "terms/index.html"):
+            for link in ("/privacy", "/terms"):
+                with self.subTest(page=page, link=link):
+                    shutil.rmtree(self.site)
+                    shutil.copytree(ROOT / "site", self.site)
+                    path = self.site / page
+                    path.write_text(path.read_text().replace(f'href="{link}"', 'href="/"'))
+                    self.assertTrue(any(f"footer link to {link}" in failure for failure in check_site(self.site)))
+
+    def test_legal_page_identity_is_enforced(self):
+        privacy = self.site / "privacy/index.html"
+        text = privacy.read_text()
+        cases = [
+            (text.replace("https://reconnectaichat.com/privacy", "https://reconnectaichat.com/"), "canonical"),
+            (text.replace("<title>Reconnect Privacy Policy</title>", "<title>Reconnect</title>"), "title"),
+            (text.replace("<h1>", "<h2>").replace("</h1>", "</h2>"), "h1"),
+            (text.replace('<html lang="en">', "<html>"), "lang"),
+        ]
+        for changed, reason in cases:
+            with self.subTest(reason=reason):
+                privacy.write_text(changed)
+                self.assertTrue(any(reason in failure for failure in check_site(self.site)))
+
+    def test_links_allowed_on_legal_pages_only_as_listed(self):
+        page = self.site / "terms/index.html"
+        original = page.read_text()
+        for addition, reason in [
+            ('<a href="https://konggu-api-production.up.railway.app/privacy">Old</a>', "external URL"),
+            ('<a href="https://apple.com/">Apple</a>', "external URL"),
+            ('<a href="mailto:jie@reconnectaichat.com">Mail</a>', "mailto"),
+        ]:
+            with self.subTest(reason=reason, addition=addition):
+                page.write_text(original.replace("</body>", addition + "</body>"))
+                self.assertTrue(any(reason in failure for failure in check_site(self.site)))
+        page.write_text(original.replace("</body>", '<a href="mailto:xj@reconnectaichat.com">Mail</a></body>'))
+        self.assertEqual(check_site(self.site), [])
+
+    def test_draft_markers_are_whole_words(self):
+        page = self.site / "privacy/index.html"
+        original = page.read_text()
+        page.write_text(original.replace("</body>", "<p>Notes, todos and templates.</p></body>"))
+        self.assertEqual(check_site(self.site), [])
+        page.write_text(original.replace("</body>", "<p>A TODO remains.</p></body>"))
+        self.assertTrue(any("draft marker" in failure for failure in check_site(self.site)))
+
     def test_size_limit(self):
         self.index.write_text(self.original + " " * (12 * 1024))
         self.assertTrue(any("exceeds 12 KB" in failure for failure in check_site(self.site)))
