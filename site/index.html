@@ -110,6 +110,15 @@
   .cta:focus-visible { outline: 2px solid var(--ink); outline-offset: 6px; border-radius: 4px; }
   @media (prefers-reduced-motion: reduce) { .cta::after { transition: none; } }
 
+.founder {
+    margin: 28px 0 0;
+    max-width: 34em;
+    font-size: 15px;
+    color: var(--ink-2);
+    text-wrap: pretty;
+  }
+  .founder a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+
   footer {
     display: flex;
     flex-wrap: wrap;
@@ -144,6 +153,7 @@
       <p>Coming next: it speaks first. Before a meeting, it offers to walk you through what matters, out loud, in your own language.</p>
     </div>
     <a class="cta" href="mailto:hello@reconnectaichat.com">Join the iPhone beta</a>
+    <p class="founder">Made by <a href="https://www.linkedin.com/in/jiexi">Jie Xi</a>, founder. I’m building Reconnect because I believe people need a conversational agent to help with their meetings and work. I believe voice + context is a good combo to create value for professionals.</p>
   </main>
 
   <footer>
