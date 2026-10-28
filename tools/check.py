@@ -9,7 +9,7 @@ from pathlib import Path
 from urllib.parse import unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
-ALLOWED_HOSTS = {"testflight.apple.com", "www.apple.com", "reconnectaichat.com"}
+ALLOWED_HOSTS = {"testflight.apple.com", "www.apple.com", "reconnectaichat.com", "www.linkedin.com"}
 ALLOWED_MAILTO = {"mailto:hello@reconnectaichat.com", "mailto:xj@reconnectaichat.com"}
 # The policy and terms are the live API documents; their canonical address and title are fixed.
 LEGAL_PAGES = {"privacy/index.html": ("https://reconnectaichat.com/privacy", "Reconnect Privacy Policy"),
