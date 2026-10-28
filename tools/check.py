@@ -225,6 +225,8 @@ def check_site(site):
             ("link", {"rel": "apple-touch-icon", "href": "/assets/apple-touch-icon.png"}),
             ("meta", {"name": "viewport", "content": "width=device-width, initial-scale=1"}),
             ("meta", {"charset": "utf-8"}),
+            # Search Console ownership; removing it ends the domain verification Google OAuth relies on.
+            ("meta", {"name": "google-site-verification", "content": "iGbHJ30YaLKHouEmRjTGnDFLnMZvKVNwsRREXrAQqxY"}),
         ] + [("link", {"rel": "icon", "type": "image/png", "sizes": f"{size}x{size}",
                        "href": f"/assets/favicon-{size}.png"}) for size in (32, 192, 512)]
         for tag, attrs in expected:
